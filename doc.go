@@ -10,7 +10,7 @@ HookServe is a small golang utility for receiving github webhooks. It's easy to 
         case event := <-server.Events:
             fmt.Println(event.Owner + " " + event.Repo + " " + event.Branch + " " + event.Commit)
         default:
-            time.Sleep(100)
+            time.Sleep(time.Millisecond * 100)
         }
     }
 
